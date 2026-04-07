@@ -1,7 +1,7 @@
 services:
   app:
     build: .
-    image: YOUR_DOCKERHUB_USERNAME/lab6-app:latest
+    image: nancyahmed/lab6-app:latest
     container_name: lab8-app-container
     ports:
       - "3000:3000"

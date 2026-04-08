@@ -40,6 +40,8 @@ jobs:
           script: |
             cd ~/lab8-cicd
             git pull
+            docker-compose down -v --remove-orphans || true
+            docker rm -f lab8-app-container lab8-mongo || true
+            docker volume rm lab8-cicd_mongo_data || true
             docker-compose pull
-            docker compose down -v
             docker-compose up -d
